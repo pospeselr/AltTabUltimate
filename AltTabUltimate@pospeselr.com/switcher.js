@@ -20,20 +20,20 @@ Switcher.prototype = {
     enable : function() {
 
         let startSwitcher = Lang.bind(this, this._startSwitcher);
-        Utilities.SetKeybinding('switch-applications', startSwitcher);
-        Utilities.SetKeybinding('switch-group', startSwitcher);
-        Utilities.SetKeybinding('switch-applications-backward', startSwitcher);
-        Utilities.SetKeybinding('switch-group-backward', startSwitcher);
+        Utilities.setKeybinding('switch-applications', startSwitcher);
+        Utilities.setKeybinding('switch-group', startSwitcher);
+        Utilities.setKeybinding('switch-applications-backward', startSwitcher);
+        Utilities.setKeybinding('switch-group-backward', startSwitcher);
     },
 
     disable : function() {
 
         global.log("AltTabUltimate: Disable");
 
-        Utilities.SetKeybinding('switch-applications', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
-        Utilities.SetKeybinding('switch-group', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
-        Utilities.SetKeybinding('switch-applications-backward', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
-        Utilities.SetKeybinding('switch-group-backward', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
+        Utilities.setKeybinding('switch-applications', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
+        Utilities.setKeybinding('switch-group', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
+        Utilities.setKeybinding('switch-applications-backward', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
+        Utilities.setKeybinding('switch-group-backward', Lang.bind(Main.wm, Main.wm._startAppSwitcher));
     },
 
     _startSwitcher : function(display, screen, window, binding) {
